@@ -17,20 +17,20 @@
 
 	?>
 
-	 <form action="process_update.php" method="POST">
-	 <input type="hidden" name="ma" value="<?php echo $mang['ma'] ?>">
-	Tên: <input type="text" name="ten" value="<?php echo $mang['ten'] ?>">
-	<Br>
-	Địa chỉ: <textarea name="dia_chi" > <?php echo $mang['dia_chi'] ?> </textarea>
-	<Br>
-	SĐT: <input type="number" name="sdt" value="<?php echo $mang['sdt'] ?>">
-	<Br>
-	Ảnh: <input type="text" name="anh" value="<?php echo $mang['anh'] ?>">
-	<Br>
+	<form action="process_update.php" method="POST">
+		<input type="hidden" name="ma" value="<?php echo $mang['ma'] ?>">
+		Tên: <input type="text" name="ten" value="<?php echo $mang['ten'] ?>">
+		<Br>
+		Địa chỉ: <textarea name="dia_chi" > <?php echo $mang['dia_chi'] ?> </textarea>
+		<Br>
+		SĐT: <input type="number" name="sdt" value="<?php echo $mang['sdt'] ?>">
+		<Br>
+		Ảnh: <input type="text" name="anh" value="<?php echo $mang['anh'] ?>">
+		<Br>
 
-	<button>
-		Sửa
-	</button>
+		<button>
+			Sửa
+		</button>
 	</form>
 </body>
 </html>

@@ -5,10 +5,10 @@
 	<title></title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<style type="text/css">
-		body {
-    			font-family: 'Roboto';font-size: 22px;
-			}	
-	</style>
+	body {
+		font-family: 'Roboto';font-size: 22px;
+	}	
+</style>
 </head>
 <body>
 	<ul>
@@ -38,12 +38,12 @@
 			</a>
 		</li>
 		<li>
-			<a href="thong_ke">
+			<a href="san_pham_theo_nha_san_xuat.php">
 				Thống kê sản phẩm theo nhà sản xuất
 			</a>
 		</li>
 
-</ul>
+	</ul>
 
 </body>
 </html>

@@ -15,7 +15,7 @@ $tim_kiem = $_GET['tim_kiem'];
         <div class="search">
             <form action="#">
                 <input type="text"
-                    placeholder=" Search Courses"
+                    placeholder=" Tìm kiếm sản phẩm"
                     name="tim_kiem">
                 <button>
                     <i class="fa fa-search"
@@ -37,5 +37,7 @@ $tim_kiem = $_GET['tim_kiem'];
 
         <img src="">
     </div>
-     
+        <div class="banner_ngang">
+            <img src="admin/san_pham/anh/1659500708.jpg" style="padding-top: 50px; padding-left: 100px; width: 95%;">
+        </div>
 	</div>

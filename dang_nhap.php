@@ -44,16 +44,16 @@
         margin: 5px;
     }
     i{
-       padding: 10px;
-       background: dodgerblue;
-       color: white;
-       min-width: 30px;
-       text-align: center;
-       margin-left:5px;
+     padding: 10px;
+     background: dodgerblue;
+     color: white;
+     min-width: 30px;
+     text-align: center;
+     margin-left:5px;
 
-   }
-   
-   button{
+ }
+ 
+ button{
     background: dodgerblue;
     border-radius: 10px;
     width: 380px;
@@ -64,10 +64,10 @@
 
 }
 h1 {
- font-size: 40px;
- background: -webkit-linear-gradient(#eee, #333);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+   font-size: 40px;
+   background: -webkit-linear-gradient(#eee, #333);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 </style>
@@ -97,10 +97,10 @@ h1 {
       unset($_SESSION['success']);
   }
   if(isset($_SESSION['ma'])){
-   header('location:index.php');
-   
-}
-?>
+     header('location:index.php');
+     
+ }
+ ?>
 </body>
 	<!-- <div id="form">
         <br>

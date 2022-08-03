@@ -11,7 +11,6 @@ $ma_khach_hang = $_SESSION['ma'];
 
 $trang_thai = 0; //moi dat
 date_default_timezone_set('Asia/Ho_Chi_Minh');
-
 $thoi_gian_dat  = date('d/m/Y H:i:s'); //ngay bay gio
 $tong_tien = 0;
 foreach ($gio[$id] as $ma => $each) {
@@ -19,13 +18,9 @@ foreach ($gio[$id] as $ma => $each) {
 	$tong_tien += $tong_tien_moi_san_pham;
 }
 
-
 $sql = "insert into hoa_don(ma_khach_hang,ten_nguoi_nhan,sdt_nguoi_nhan,dia_chi_nguoi_nhan,trang_thai,thoi_gian_dat,tong_tien)
 values('$ma_khach_hang','$ten_nguoi_nhan','$sdt_nguoi_nhan','$dia_chi_nguoi_nhan','$trang_thai','$thoi_gian_dat','$tong_tien')"; 
 $ket_qua = mysqli_query($ket_noi,$sql);
-
-
-
 
 foreach ($gio[$id] as $ma_san_pham => $each) {
 	$sql1= "select max(ma) from hoa_don where ma_khach_hang = '$ma_khach_hang' ";

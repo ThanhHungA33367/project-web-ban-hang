@@ -126,10 +126,6 @@
 </style>  -->
 <body>
 
-	
-
-	
-	
 	<div id="div_tong">
 		<?php include'menu1.php' ?>
 		<?php include'banner.php' ?>

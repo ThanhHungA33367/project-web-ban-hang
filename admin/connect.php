@@ -13,4 +13,4 @@ if (isset($_GET['thanh_cong'])) {?>
 	<span style="color: green;">
 		<?php echo $_GET['thanh_cong'] ?>
 	</span>
-<?php }?>
+	<?php }?>

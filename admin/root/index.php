@@ -30,7 +30,7 @@
             <div class="dropdown">
                 <button class="dropbtn">Quản lý</button>
                 <div class="dropdown-content">
-                    <a href="admin/san_pham/index.php">Quản lý sản phẩm</a>
+                    <a href="../san_pham/index.php">Quản lý sản phẩm</a>
                     <a href="#">Quản lý đơn hàng</a>
                     <a href="#">Quản lý nhà sản xuất</a>
                 </div>
@@ -69,7 +69,7 @@
 
         
     </div>
-    
+    <img src="../san_pham/anh/1659500708.jpg" style="padding-top: 50px; padding-left: 100px; width: 95%;">
 </div>
 <?php include'banner2.php' ?>
 <?php include'product2.php' ?>

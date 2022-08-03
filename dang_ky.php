@@ -62,8 +62,8 @@
 </head>
 <body>
 	<?php
-require 'admin/connect.php';
-?>
+	require 'admin/connect.php';
+	?>
 	<div id="form">
 		<h1>Đăng ký tài khoản</h1>
 		<form action="process.dang_ky.php" method="POST">
