@@ -17,56 +17,57 @@
     <div id="div_tren">
 
         <div id="navlist">
-            <a href="index.php">Home</a>
+            <a href="../index.php">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Quản lý</button>
                 <div class="dropdown-content">
-                    <a href="../san_pham/index.php">Quản lý sản phẩm</a>
-                    <a href="../don_hang/index.php">Quản lý đơn hàng</a>
-                    <a href="../nha_san_xuat/index.php">Quản lý nhà sản xuất</a>
-                </div>
+                 <a href="../san_pham/index.php">Quản lý sản phẩm</a>
+                 <a href="../don_hang/index.php">Quản lý đơn hàng</a>
+                 <a href="../nha_san_xuat/index.php">Quản lý nhà sản xuất</a>
+                 <a href="../nhan_vien/index.php">Quản lý nhân viên</a>
+             </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbtn">Thống kê</button>
+            <div class="dropdown-content">
+                <a href="../thong_ke/thong_ke_don.php">Thống kê đơn hàng</a>
+                <a href="../thong_ke/thong_ke_san_pham_da_ban.php">Thống kê sản phẩm bán</a>
+                <a href="../thong_ke/doanh_thu.php">Thống kê doanh thu</a>
+                <a href="../thong_ke/">Thống kê số thành viên</a>
+                <a href="../thong_ke/khach_hang_tiem_nang.php">Khách hàng tiềm năng</a>
+                <a href="../thong_ke/san_pham_theo_nha_san_xuat.php">Thống kê sản phẩm theo hãng</a>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">Thống kê</button>
-                <div class="dropdown-content">
-                    <a href="../thong_ke/thong_ke_don.php">Thống kê đơn hàng</a>
-                    <a href="../thong_ke/thong_ke_san_pham_da_ban.php">Thống kê sản phẩm bán</a>
-                    <a href="../thong_ke/doanh_thu.php">Thống kê doanh thu</a>
-                    <a href="../thong_ke/">Thống kê số thành viên</a>
-                    <a href="../thong_ke/khach_hang_tiem_nang.php">Khách hàng tiềm năng</a>
-                    <a href="../thong_ke/san_pham_theo_nha_san_xuat.php">Thống kê sản phẩm theo hãng</a>
-                </div>
-            </div>
-            <a href="#">About Us</a>
-            <a href="#">Liên hệ</a>
+        </div>
+        <a href="#">About Us</a>
+        <a href="#">Liên hệ</a>
 
-            
-            <div id="thanh_cong_cu">
-                <?php if(isset($_SESSION['level'])){ ?>
-                    <a href="../../dang_xuat.php" >Đăng xuất</a>
-                <?php } ?> 
-            </div>
-
+        
+        <div id="thanh_cong_cu">
+            <?php if(isset($_SESSION['level'])){ ?>
+                <a href="../../dang_xuat.php" >Đăng xuất</a>
+            <?php } ?> 
         </div>
 
     </div>
-    <form action="" method=POST style="padding-top: 70px;">
-       Hôm nay:
-       <input type="date"  name="ngay">
-       Tháng:
-       <input type="month" name="thang">
-       Năm:
-       <select name="nam" value ='1970'>
-        <option>Năm</option>
-        <?php for ($i=date('Y'); $i >= 1970 ; $i--) { ?>
-          <option ><?php echo $i ?></option>
-      <?php } ?>
-  </select>
-  <button style="width: 80px;">hiển thị</button>
+
+</div>
+<form action="" method=POST style="padding-top: 70px;">
+ Hôm nay:
+ <input type="date"  name="ngay">
+ Tháng:
+ <input type="month" name="thang">
+ Năm:
+ <select name="nam" value ='1970'>
+    <option>Năm</option>
+    <?php for ($i=date('Y'); $i >= 1970 ; $i--) { ?>
+      <option ><?php echo $i ?></option>
+  <?php } ?>
+</select>
+<button style="width: 80px;">hiển thị</button>
 </form>
-    <h1 style="text-align: center;">Thống kê đơn</h1>
+<h1 style="text-align: center;">Thống kê đơn</h1>
 <table border="1" width="100%" style="padding-top: 30px;"> 
-   <tr style="background-color: #BEBEBE">
+ <tr style="background-color: #BEBEBE">
     <td>
         <h1>STT:</h1>
     </td>
@@ -102,26 +103,26 @@ if(isset($_POST['ngay']) || isset($_POST['thang']) || isset($_POST['nam'])){
     $ket_qua = mysqli_query($ket_noi,$sql);
 
     foreach ($ket_qua as $each)  { ?>   
-     <tr>
+       <tr>
         <td>
-         <?php 
-         $stt++;
-         echo $stt; 
-         ?>
-     </td>
-     <td>
-         <?php echo $each['ten_nguoi_nhan']; ?>
-     </td>
-     <td>
-         <?php echo $each['sdt_nguoi_nhan']; ?>
-     </td>
-     <td>
-         <?php echo $each['dia_chi_nguoi_nhan']; ?>
-     </td>
-     <td>
-         <?php echo $each['thoi_gian_dat']; ?>
-     </td>
-     <td>
+           <?php 
+           $stt++;
+           echo $stt; 
+           ?>
+       </td>
+       <td>
+           <?php echo $each['ten_nguoi_nhan']; ?>
+       </td>
+       <td>
+           <?php echo $each['sdt_nguoi_nhan']; ?>
+       </td>
+       <td>
+           <?php echo $each['dia_chi_nguoi_nhan']; ?>
+       </td>
+       <td>
+           <?php echo $each['thoi_gian_dat']; ?>
+       </td>
+       <td>
         <?php if($each['trang_thai'] == 1){
             echo "Đã hoàn thành";
         }
@@ -131,8 +132,8 @@ if(isset($_POST['ngay']) || isset($_POST['thang']) || isset($_POST['nam'])){
 
     </td>
     <td>
-     <?php echo $each['tong_tien']; ?>
- </td>
+       <?php echo $each['tong_tien']; ?>
+   </td>
 </tr>
 <?php } ?>
 <?php } ?>

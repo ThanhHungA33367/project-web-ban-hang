@@ -17,13 +17,14 @@
     <div id="div_tren">
 
         <div id="navlist">
-            <a href="index.php">Home</a>
+            <a href="../index.php">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Quản lý</button>
                 <div class="dropdown-content">
                     <a href="../san_pham/index.php">Quản lý sản phẩm</a>
                     <a href="../don_hang/index.php">Quản lý đơn hàng</a>
                     <a href="../nha_san_xuat/index.php">Quản lý nhà sản xuất</a>
+                    <a href="../nhan_vien/index.php">Quản lý nhân viên</a>
                 </div>
             </div>
             <div class="dropdown">

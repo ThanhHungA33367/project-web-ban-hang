@@ -130,9 +130,15 @@
 		<?php include'menu1.php' ?>
 		<?php include'banner.php' ?>
 		<?php include'product1.php' ?>
-		<?php 
-		
-		?> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.thong_bao').click(function() {
+					alert('Thêm thành công');
+				});
+			});
+
+		</script>
 	</div>
 	
 

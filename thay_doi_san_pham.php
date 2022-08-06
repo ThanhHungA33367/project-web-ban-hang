@@ -12,7 +12,7 @@ if($type === 'giam'){
 		$_SESSION['gio'][$id][$ma]['so_luong']--;
 		header("location:gio_hang.php?ma=$id");
 	}
-	if($_SESSION['gio'][$id][$ma]['so_luong']===1){
+	if($_SESSION['gio'][$id][$ma]['so_luong']===0){
 		unset($_SESSION['gio'][$id][$ma]);
 		header("location:gio_hang.php?ma=$id");
 	}

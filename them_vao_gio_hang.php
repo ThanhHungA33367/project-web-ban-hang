@@ -19,4 +19,5 @@ if(empty($_SESSION['gio'][$id][$ma])){
 else{
 	$_SESSION['gio'][$id][$ma]['so_luong']++ ;
 }
+header('location:index.php');
 

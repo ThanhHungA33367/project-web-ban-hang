@@ -209,41 +209,38 @@
 			float: left;
 		}
 
-		#divtren .navlist{
-			background-color: #0074D9;
-			position: absolute;
-			width: 100%;
-			height: 50%;
-		}
-		
-		/* styling navlist anchor element */
-		#navlist a {
-			float:left;
-			display: block;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 15px;
-			text-decoration: none;
-			font-size: 15px;
-		}
-		#thanh_cong_cu a {
-			float:right;
-			display: block;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 15px;
-			text-decoration: none;
-			font-size: 15px;
-		}
-		.navlist-right{
-			float:right;
-		}
-		
-		/* hover effect of navlist anchor element */
-		#navlist a:hover {
-			background-color: #ddd;
-			color: black;
-		}
+	#navlist {
+            background-color: #0074D9;
+            position: absolute;
+            width: 100%;
+        }
+ 
+        #navlist a {
+            float:left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+       #thanh_cong_cu a {
+            float:right;
+            margin-top: -45px;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 15px;
+       }
+        .navlist-right{
+            float:right;
+        }
+        #navlist a:hover {
+            background-color: #ddd;
+            color: black;
+        }
 		
 		/* styling search bar */
 		.search input[type=text]{

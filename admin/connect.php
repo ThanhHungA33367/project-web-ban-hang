@@ -1,5 +1,5 @@
 <?php
-$ket_noi = mysqli_connect('localhost', 'root', '', 'hungdeptrai');
+$ket_noi = mysqli_connect('localhost', 'root', '', 'web_ban_hang');
 mysqli_set_charset($ket_noi, 'utf8');
 
 if (isset($_GET['loi'])) {?>

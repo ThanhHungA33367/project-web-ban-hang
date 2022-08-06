@@ -39,12 +39,12 @@ $sql = "select * from san_pham
 				</h1>
 				
 				<Br>
-				 <a href="chi_tiet_san_pham.php?ma=<?php echo $each['id'] ?>"> <img src="admin/san_pham/anh/<?php echo $each['anh'] ?>"  height = "440"> </a>
+				 <a href="chi_tiet_san_pham.php?ma=<?php echo $each['id'] ?>"> <img src="admin/san_pham/anh/<?php echo $each['anh'] ?>"  height = "440" > </a>
 				<h2>
 					Giá: <?php echo $each['gia']; ?>	
 				</h2>
 				<?php if(isset($_SESSION['ma'])){ ?>
-					<a href="them_vao_gio_hang.php?ma=<?php echo $each['id'] ?>"> <i class="fa fa-shopping-cart" style="font-size:48px;color:red"></i> </a>
+					<a href="them_vao_gio_hang.php?ma=<?php echo $each['id'] ?>" class ='thong_bao' > <i class="fa fa-shopping-cart" style="font-size:48px;color:red"></i> </a>
 				<?php } ?> 
 			</div>
 		<?php }  ?>

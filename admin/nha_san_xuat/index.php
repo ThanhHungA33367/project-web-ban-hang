@@ -21,8 +21,9 @@
 				<button class="dropbtn">Quản lý</button>
 				<div class="dropdown-content">
 					<a href="../san_pham/index.php">Quản lý sản phẩm</a>
-					<a href="#">Quản lý đơn hàng</a>
-					<a href="#">Quản lý nhà sản xuất</a>
+					<a href="../don_hang/index.php"">Quản lý đơn hàng</a>
+					<a href="index.php">Quản lý nhà sản xuất</a>
+					<a href="../nhan_vien/index.php"">Quản lý nhân viên</a>
 				</div>
 			</div>
 			<div class="dropdown">

@@ -39,9 +39,12 @@
 			<th>Nhà sản xuất </th>
 
 		</tr>
-
+		<a href="index.php"> Quay lại trang chủ</a>
 		<?php
-
+		if(!isset($_SESSION['gio'][$id1])){
+			echo "CHƯA CÓ SẢN PHẨM TRONG GIỎ";
+		}
+		else{
 		foreach ($gio[$id1] as $ma => $each) {?>
 			<tr>
 				<td>
@@ -76,7 +79,7 @@
 					<?php echo $each['nha_san_xuat'] ?>
 				</td>
 			</tr>
-
+		<?php }?>
 		<?php }?>
 
 	</table>

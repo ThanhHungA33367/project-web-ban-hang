@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 require'admin/connect.php';
 $email = $_POST['email'];
 $mat_khau = $_POST['mat_khau'];

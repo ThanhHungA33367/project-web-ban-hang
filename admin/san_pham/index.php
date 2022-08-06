@@ -25,6 +25,7 @@
 					<a href="index.php">Quản lý sản phẩm</a>
 					<a href="../don_hang/index.php">Quản lý đơn hàng</a>
 					<a href="../nha_san_xuat/index.php">Quản lý nhà sản xuất</a>
+					<a href="../nhan_vien/index.php">Quản lý nhân viên</a>
 				</div>
 			</div>
 			<div class="dropdown">

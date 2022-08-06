@@ -1,9 +1,11 @@
-<?php require '../check_admin.php' ?>
+<?php require '../check_super_admin.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>
+		
+	</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../../style2.css"> 
 
@@ -21,9 +23,9 @@
 				<button class="dropbtn">Quản lý</button>
 				<div class="dropdown-content">
 					<a href="../san_pham/index.php">Quản lý sản phẩm</a>
-					<a href="index.php">Quản lý đơn hàng</a>
+					<a href="../don_hang/index.php">Quản lý đơn hàng</a>
 					<a href="../nha_san_xuat/index.php">Quản lý nhà sản xuất</a>
-					<a href="../nhan_vien/index.php">Quản lý nhân viên</a>
+					<a href="index.php">Quản lý nhân viên</a>
 				</div>
 			</div>
 			<div class="dropdown">
@@ -43,7 +45,7 @@
 			<div class="search">
 				<form action="" method="GET">
 					<input type="text"
-					placeholder=" Tìm kiếm tên nhà sản xuất"
+					placeholder=" Tìm kiếm nhân viên"
 					name="tim_kiem">
 					<button>
 						<i class="fa fa-search"
@@ -61,68 +63,78 @@
 	</div>
 
 </div>
-<a href="index.php"> <p style="padding-top:60px">Quay lại</p> </a>
-<h1 style="text-align: center;">Quản lý đơn hàng</h1>
-	<table border="1" width="100%" style="padding-top: 70px;">
-		<tr style="background-color: #BEBEBE;">
-			<th>Mã</th>
-			<th>Thời gian đặt</th>
-			<th>Thông tin người nhận</th>
-			<th>Thông tin người đặt</th>
-			<th>Trạng thái</th>
-			<th>Tổng tiền</th>
-			<th>Xem</th>
-			<th>Sửa</th>
-		</tr>
-		<?php 
-		include '../connect.php';
-		if(isset($_GET['tim_kiem'])){
-			$tim_kiem = $_GET['tim_kiem'];
-			$sql = "select hoa_don.*, khach_hang.ten as ten_khach_hang from hoa_don join khach_hang on hoa_don.ma_khach_hang = khach_hang.ma where hoa_don.ma like '%$tim_kiem%'";
-		}
-		else{
-			$sql = 'select hoa_don.*, khach_hang.ten as ten_khach_hang from hoa_don join khach_hang on hoa_don.ma_khach_hang = khach_hang.ma';
-		}
-		$ket_qua = mysqli_query($ket_noi,$sql);
 
-		foreach ($ket_qua as $each) {?>
-			<tr>
-				<td>
-					<?php echo $each['ma']; ?>
-				</td>
-				<td>
-					<?php echo $each['thoi_gian_dat']; ?>
-				</td>
-				<td>
-					<?php echo $each['ten_nguoi_nhan']; ?>
-				</td>
-				<td>
-					<?php echo $each['ten_khach_hang']; ?>
-				</td>
-				<td>
-					<?php if($each['trang_thai'] == 0)
-					{
-						echo 'Mới đặt';
-					} 
-					else if($each['trang_thai'] == 1){
-						echo "Đã duyệt";
-					}
-					?>
-				</td>
-				<td>
-					<?php echo '$'.$each['tong_tien']; ?>
-				</td>
-				<td>
-					<a href="xem_chi_tiet.php?ma=<?php echo $each['ma'] ?>">Xem chi tiết</a>
-				</td>
-				<td>
-					<?php if($each['trang_thai'] == 0) {?>
-						<a href="duyet_don.php?ma=<?php echo $each['ma'] ?>&type=duyet" >Duyệt</a> 
-						<a href="duyet_don.php?ma=<?php echo $each['ma'] ?>&type=huy">Hủy</a>
-					<?php } ?>
-				</td>
-			</tr>
-		<?php } ?>
-	</table>
+<a href="nhap.php">
+	<p style="padding-top: 60px;">Thêm nhân viên</p>
+</a>
+<a href="index.php">Quay lại</a>
+
+<h1 style="text-align:center">
+	Quản lý nhân viên
+</h1>
+<?php 
+require'../connect.php';
+if(isset($_GET['tim_kiem'])){
+	$tim_kiem = $_GET['tim_kiem'];
+	$sql = "select * from admin where ten like '%$tim_kiem%'";
+
+}	
+else{
+	$sql = "select * from admin" ;
+}
+$ketqua = mysqli_query($ket_noi,$sql);
+?>
+
+<table border="1" width="100%" style="padding-top:60px">
+
+	<tr style="background-color: #BEBEBE">
+		<th>
+			Mã: 
+		</th>
+		<th>
+			Tên nhân viên:
+		</th>
+		<th>
+			Email nhân viên:
+		</th>
+		<th>
+			Mật khẩu:
+		</th>
+		<th>
+			
+		</th>
+		<th>
+			
+		</th>
+
+	</tr>
+	<?php foreach ($ketqua as $each ) { ?>
+
+		<tr>
+			<th>
+				<?php echo $each['ma']; ?>
+			</th>
+			<th>
+				<?php echo $each['ten']; ?>
+			</th>
+			
+			<th>
+				<?php echo $each['email']; ?>
+			</th>
+			<th>
+				<?php echo $each['mat_khau']; ?>
+			</th>
+			
+			<th>
+				<a href="sua.php?id=<?php echo $each['ma'] ?>">Sửa</a>
+			</th>
+			<th>
+				<a href="xoa.php?id=<?php echo $each['ma'] ?>">Xóa</a>
+			</th>
+
+		</tr>
+	<?php } ?> 
+
+</table>
 </body>
 </html>
