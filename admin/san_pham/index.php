@@ -1,19 +1,21 @@
 <?php require '../check_admin.php' ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>
-		
+
 	</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../../style2.css"> 
+	<link rel="stylesheet" type="text/css" href="../../style2.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 	<div id="div_tren">
 
@@ -44,111 +46,105 @@
 
 			<div class="search">
 				<form action="" method="GET">
-					<input type="text"
-					placeholder=" Tìm kiếm sản phẩm"
-					name="tim_kiem">
+					<input type="text" placeholder=" Tìm kiếm sản phẩm" name="tim_kiem">
 					<button>
-						<i class="fa fa-search"
-						style="font-size: 18px;">
-					</i>
-				</button>
-			</form>
-		</div>
-		<div id="thanh_cong_cu">
-			<?php if(isset($_SESSION['level'])){ ?>
-				<a href="../../dang_xuat.php" >Đăng xuất</a>
-			<?php } ?> 
+						<i class="fa fa-search" style="font-size: 18px;">
+						</i>
+					</button>
+				</form>
+			</div>
+			<div id="thanh_cong_cu">
+				<?php if (isset($_SESSION['level'])) { ?>
+					<a href="../../dang_xuat.php">Đăng xuất</a>
+				<?php } ?>
+			</div>
+
 		</div>
 
 	</div>
 
-</div>
+	<a href="nhap.php">
+		<p style="padding-top: 60px;">Thêm vào sản phẩm</p>
+	</a>
+	<a href="index.php">Quay lại</a>
 
-<a href="nhap.php">
-	<p style="padding-top: 60px;">Thêm vào sản phẩm</p>
-</a>
-<a href="index.php">Quay lại</a>
-
-<h1 style="text-align:center">
-	Quản lý sản phẩm
-</h1>
-<?php 
-require'../connect.php';
-if(isset($_GET['tim_kiem'])){
-	$tim_kiem = $_GET['tim_kiem'];
-	$sql = "select san_pham .* ,nha_san_xuat.ten as nsxten from san_pham join nha_san_xuat on san_pham.nha_san_xuat_id = nha_san_xuat.ma  where san_pham.ten like '%$tim_kiem%'";
-
-}	
-
-else{
-	$sql = "select san_pham .* ,nha_san_xuat.ten as nsxten from san_pham join nha_san_xuat on san_pham.nha_san_xuat_id = nha_san_xuat.ma order by san_pham.id" ;
-}
+	<h1 style="text-align:center">
+		Quản lý sản phẩm
+	</h1>
+	<?php
+	require '../connect.php';
+	if (isset($_GET['tim_kiem'])) {
+		$tim_kiem = $_GET['tim_kiem'];
+		$sql = "select san_pham .* ,nha_san_xuat.ten as nsxten from san_pham join nha_san_xuat on san_pham.nha_san_xuat_id = nha_san_xuat.ma  where san_pham.ten like '%$tim_kiem%'";
+	} else {
+		$sql = "select san_pham .* ,nha_san_xuat.ten as nsxten from san_pham join nha_san_xuat on san_pham.nha_san_xuat_id = nha_san_xuat.ma order by san_pham.id";
+	}
 
 
-$ketqua = mysqli_query($ket_noi,$sql);
+	$ketqua = mysqli_query($ket_noi, $sql);
 
-?>
+	?>
 
-<table border="1" width="100%" style="padding-top:60px">
+	<table border="1" width="100%" style="padding-top:60px">
 
-	<tr style="background-color: #BEBEBE">
-		<th>
-			Mã 
-		</th>
-		<th>
-			Tên
-		</th>
-		<th>
-			Ảnh
-		</th>
-		<th>
-			Giá
-		</th>
-		<th>
-			Mô tả 
-		</th>
-		<th>
-			Tên nhà sản xuất
-		</th>
-		<th>
-			Sửa
-		</th>
-		<th>
-			Xóa
-		</th>
-
-	</tr>
-	<?php foreach ($ketqua as $each ) { ?>
-
-		<tr>
+		<tr style="background-color: #BEBEBE">
 			<th>
-				<?php echo $each['id']; ?>
+				Mã
 			</th>
 			<th>
-				<?php echo $each['ten']; ?>
+				Tên
 			</th>
 			<th>
-				<img height="100" src="anh/<?php echo $each['anh'] ?> " >
+				Ảnh
 			</th>
 			<th>
-				<?php echo $each['gia']; ?>
+				Giá
 			</th>
 			<th>
-				<?php echo $each['mo_ta']; ?>
+				Mô tả
 			</th>
 			<th>
-				<?php echo $each['nsxten']; ?>
+				Tên nhà sản xuất
 			</th>
 			<th>
-				<a href="sua.php?id=<?php echo $each['id'] ?>">Sửa</a>
+				Sửa
 			</th>
 			<th>
-				<a href="xoa.php?id=<?php echo $each['id'] ?>">Xóa</a>
+				Xóa
 			</th>
 
 		</tr>
-	<?php } ?> 
+		<?php foreach ($ketqua as $each) { ?>
+			<tr>
+				<th>
+					<?php echo $each['id']; ?>
+				</th>
+				<th>
+					<?php echo $each['ten']; ?>
+				</th>
+				<th>
+					<img height="100" src="anh/<?php echo $each['anh'] ?> ">
+				</th>
+				<th>
+					<?php echo $each['gia']; ?>
+				</th>
+				<th>
+					<?php echo $each['mo_ta']; ?>
+				</th>
+				<th>
+					<?php echo $each['nsxten']; ?>
+				</th>
+				<th>
+					<a href="sua.php?id=<?php echo $each['id'] ?>">Sửa</a>
+				</th>
+				<th>
+					<a href="xoa.php?id=<?php echo $each['id'] ?>">Xóa</a>
+				</th>
 
-</table>
+			</tr>
+		<?php } ?>
+
+	</table>
 </body>
+
 </html>
