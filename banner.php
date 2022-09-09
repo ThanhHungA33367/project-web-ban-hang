@@ -1,6 +1,8 @@
 <div id="div_banner">
 	<div class="banner_trai">
-
+		<img src="admin/san_pham/anh/1658923823.jpg" >
+		<Br>
+		<img src="admin/san_pham/anh/1658923827.jpg">
 	</div>
 	<div class="banner_giua">
 		<div class="menu">
@@ -21,7 +23,6 @@
 
 		<img src="admin/san_pham/anh/1658923823.jpg" >
 		<Br>
-
 		<img src="admin/san_pham/anh/1658923827.jpg">
 	</div>
 </div>

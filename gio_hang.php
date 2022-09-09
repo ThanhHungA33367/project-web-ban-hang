@@ -9,30 +9,26 @@
 <body>
 	<?php
 
-	if (!isset($_SESSION['ma'])) {
-		header('location:index.php');
-	}
+if (!isset($_SESSION['ma'])) {
+	header('location:index.php');
+}
 
-	$gio = $_SESSION['gio'];
-	$id1 = $_SESSION['ma'];
-	$ma_gio_hang = $_GET['ma'];
-	$tong_tien = 0;
-	$tong_tien_tung_san_pham = 0;
-	require 'admin/connect.php';
-	$sql = "select * from khach_hang
+$gio = $_SESSION['gio'];
+$id1 = $_SESSION['ma'];
+$ma_gio_hang = $_GET['ma'];
+$tong_tien = 0;
+$tong_tien_tung_san_pham = 0;
+require 'admin/connect.php';
+$sql = "select * from khach_hang
 	where ma = '$id1'";
-	$ket_qua = mysqli_query($ket_noi, $sql);
-	$mang = mysqli_fetch_array($ket_qua);
-	?>
+$ket_qua = mysqli_query($ket_noi, $sql);
+$mang = mysqli_fetch_array($ket_qua);
+?>
 	<table border="1" width="100%">
 		<tr>
 			<th>Ảnh</th>
-
 			<th>Tên</th>
-
 			<th>Giá</th>
-
-
 			<th>Số lượng</th>
 			<th>Tổng tiền</th>
 			<th>Mô tả</th>
@@ -41,11 +37,10 @@
 		</tr>
 		<a href="index.php"> Quay lại trang chủ</a>
 		<?php
-		if(!isset($_SESSION['gio'][$id1])){
-			echo "CHƯA CÓ SẢN PHẨM TRONG GIỎ";
-		}
-		else{
-		foreach ($gio[$id1] as $ma => $each) {?>
+if (!isset($_SESSION['gio'][$id1])) {
+	echo "CHƯA CÓ SẢN PHẨM TRONG GIỎ";
+} else {
+	foreach ($gio[$id1] as $ma => $each) {?>
 			<tr>
 				<td>
 					<img height="100" src="admin/san_pham/anh/<?php echo $each['anh'] ?> ">
@@ -95,7 +90,6 @@
 			Đặt hàng
 		</button>
 	</form>
-
 
 </body>
 </html>

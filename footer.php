@@ -1,12 +1,12 @@
 <div id="div_duoi" >
 	<div class="trai">
 		<p style="padding-left: 50px;">
-			<?php echo nl2br('Nơi có tất cả các sản phẩm Di Động Việt đang 
-				kinh doanh và là nơi Trade-in Thu cũ lên đời. Đặc biệt: Máy qua sử dụng giá rẻ, Trả góp 
+			<?php echo nl2br('Nơi có tất cả các sản phẩm Di Động Việt đang
+				kinh doanh và là nơi Trade-in Thu cũ lên đời. Đặc biệt: Máy qua sử dụng giá rẻ, Trả góp
 				linh hoạt với nhiều phương thức
-				*01 Xuân Thuỷ, Phường Dịch Vọng, Hà Nội 
-				* 1110 Phú Riềng Đỏ, TP Đồng Xoài, Tỉnh Bình Phước 
-				* 04 Nguyễn Ảnh Thủ, phường Hiệp Thành , Quận 12 
+				*01 Xuân Thuỷ, Phường Dịch Vọng, Hà Nội
+				* 1110 Phú Riềng Đỏ, TP Đồng Xoài, Tỉnh Bình Phước
+				* 04 Nguyễn Ảnh Thủ, phường Hiệp Thành , Quận 12
 				* 1272 Quang Trung, phường 14, Quận Gò Vấp (Sắp mở bán)
 				* 23 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Tp Hồ Chí Minh (Sắp mở bán)
 				* 967 Đ. Kha Vạn Cân Linh Chiểu, Thủ Đức, Tp Hồ Chí Minh (Sắp mở bán)

@@ -15,7 +15,7 @@
     html {
         height: 100%;
         width: 1000px;
-        background-image:   
+        background-image:
         url('https://wallpaperaccess.com/full/3232458.jpg');
     }
     #form{
@@ -25,7 +25,7 @@
         margin-left: 900px;
         background: white;
         border-radius: 10px;
-        
+
         /*border-color: coral;*/
     }
     input[type=email] {
@@ -52,7 +52,7 @@
      margin-left:5px;
 
  }
- 
+
  button{
     background: dodgerblue;
     border-radius: 10px;
@@ -86,38 +86,19 @@ h1 {
             <div id="nut_dang_nhap">
                 <button > ĐĂNG NHẬP </button>
             </div>
-            
+
         </form>
     </div>
 
-    <?php include'admin/connect.php' ;
-    session_start();
-    if(isset($_SESSION['success'])){
-      echo "loi mat khau va tai khoan";
-      unset($_SESSION['success']);
-  }
-  if(isset($_SESSION['ma'])){
-     header('location:index.php');
-     
- }
- ?>
+    <?php include 'admin/connect.php';
+session_start();
+if (isset($_SESSION['success'])) {
+	echo "loi mat khau va tai khoan";
+	unset($_SESSION['success']);
+}
+if (isset($_SESSION['ma'])) {
+	header('location:index.php');
+
+}
+?>
 </body>
-	<!-- <div id="form">
-        <br>
-        <h1 align="center">User Login</h1>
-        <form method="POST" action="process.dang_nhap.php">
-        <i class="fa fa-envelope icon"></i>
-         <input type="email" name="email" placeholder="Email">
-        <br>
-        <i class="fa fa-key icon"></i>
-        <input type="password" name="mat_khau" placeholder=" Mật khẩu">
-        <br>
-       <div id="nut_dang_nhap">
-            <button > ĐĂNG NHẬP </button>
-       </div>
-       
-        </form>
-    </div>
-	
-</body> 
-</html>

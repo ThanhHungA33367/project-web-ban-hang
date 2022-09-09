@@ -6,57 +6,45 @@
 	box-sizing: border-box;
 	
 }
-
 #div_tong{ 
 	width: 100%;
 	height:  2100px;
-	background-color: #fef6f5;
-	
 }
-
-
 #div_tren{
 	width: 100%;
 	height: 10%;
-	background-color: red;
+	
 	float: left;
 }
 #banner_ngang {
         padding-top: -50px;
     }
-/*	#div_tren .thanh_cong_cu{
-		width: 100%;
-		height: 30%;
-		background-color: green;
-		
-		}*/
-
 
 		#div_banner{
 			width: 100%;
 			height: 20%;
-			background-color: purple;
 			float: left;
 		}
 		#div_banner .banner_trai{
 			width: 15%;
 			height: 100%;
-			background-color: purple;
 			float: left;
 		}
+		.banner_trai img{
+			height: 210px;
+			width: 320px;
+		}
 		.banner_phai img{
-			height: 200px;
+			height: 210px;
 			width: 320px;
 		}
 		#div_banner .banner_giua{
 			width: 70%;
 			height: 100%;
-			background-color: green;
 			float: left;
 			text-align: center;
 			position: relative;
-			overflow: hidden; 
-			
+			overflow: hidden; 			
 		}
 		#div_banner .banner_giua .menu{
 			position: absolute;
@@ -75,8 +63,7 @@
 			border-radius: 50px;
 			margin: 0 .2em 1em;
 			transition: all .3s ease;
-			
-			
+
 		}
 		label:hover {
 			background: red;
@@ -108,23 +95,17 @@
 		.slide-3 {
 			background-image: url("admin/san_pham/anh/1658919980.jpg");
 		}
-
 		.banner_giua img{
 			height: 430px;
 			width: 1200px;
-
 		}
 		#div_banner .banner_phai{
 			width: 15%;
 			height: 100%;
-			background-color: aqua;
 			float: left;
 			text-align: bottom;
 		}
-		.banner_phai img{
-			
-			width: 400px;
-		}
+		
 
 		.row{
 			width:  100%;		
@@ -137,19 +118,13 @@
 		#div_giua{
 			padding-bottom: 6rem;
 			width: 70%;
-			background-color:  #fff;
+			
 		}
-		#trang_san_pham{
-			
-			
-
-		}	
 		#trang_san_pham a{
 			text-decoration: none;
-			
+		
 		}	
-		
-		
+
 		#div_giua .tungsanpham{
 			width: 30%;
 			height: 550px;
@@ -183,14 +158,14 @@
 		#div_duoi{
 			width: 100%;
 			height: 330px;
-			background-color: pink;
+			background-color: red;
 			float: left;
 
 		}
 		#div_duoi .trai{
 			width: 48%;
 			height: 100%;
-			background-color: green;
+
 			float: left;
 			text-align: left;
 			
@@ -199,13 +174,11 @@
 		#div_duoi .giua{
 			width: 4%;
 			height: 100%;
-			background-color: red;
 			float: left;
 		}
 		#div_duoi .phai{
 			width: 48%;
 			height: 100%;
-			background-color: blue;
 			float: left;
 		}
 
